@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Feed | CodeAlpha Social</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="stylesheet" href="css/posts.css">
+    <script src="js/posts.js" defer></script>
+    <script src="js/notificationBadge.js"></script>
+</head>
+<body data-page="feed">
+    <header class="navbar">
+        <a class="brand" href="feed.html">CodeAlpha<span>Social</span></a>
+
+        <nav class="feed-nav">
+            
+            <a href="people.html">People</a>
+            
+<a id="notificationLink" href="notifications.html">
+    Notifications <span id="notificationBadge"></span>
+</a>
+
+            <a class="nav-link active" href="feed.html">Feed</a>
+            <a class="nav-link" href="profile.html">My Profile</a>
+            <button id="logoutBtn" class="secondary-btn" type="button">Log out</button>
+        </nav>
+    </header>
+
+    <main class="feed-layout">
+        <section class="feed-heading">
+            <span class="eyebrow">YOUR COMMUNITY</span>
+            <h1>Developer Feed<span>.</span></h1>
+            <p>Share what you're building. Learn from others. Grow together.</p>
+        </section>
+
+        <section class="composer-card">
+            <div class="composer-top">
+                <div class="composer-avatar" id="composerAvatar">U</div>
+                <div>
+                    <strong id="composerName">Your next idea starts here</strong>
+                    <p>Share an update with the community</p>
+                </div>
+            </div>
+
+            <form id="postForm">
+                <label class="visually-hidden" for="postContent">Write a post</label>
+                <textarea
+                    id="postContent"
+                    maxlength="2000"
+                    placeholder="What are you working on today?"
+                    rows="4"
+                ></textarea>
+
+                <label for="postImageUrl">Image URL (optional)</label>
+                <input
+                    id="postImageUrl"
+                    type="url"
+                    placeholder="https://example.com/image.jpg"
+                >
+
+                <div class="composer-bottom">
+                    <span id="charCount">0 / 2000</span>
+                    <button class="primary-btn" type="submit" id="publishBtn">
+                        Publish post <span>→</span>
+                    </button>
+                </div>
+
+                <p id="postMessage" class="message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="feed-section">
+            <div class="feed-section-heading">
+                <h2>Latest posts</h2>
+                <button id="refreshBtn" class="refresh-btn" type="button">↻ Refresh</button>
+            </div>
+
+            <p id="feedMessage" class="message" role="status" aria-live="polite"></p>
+            <div id="postsContainer" class="posts-container"></div>
+        </section>
+    </main>
+
+    <footer class="footer">© 2026 CodeAlpha Social Platform</footer>
+</body>
+</html>

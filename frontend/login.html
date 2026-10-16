@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | CodeAlpha Social</title>
+    <link rel="icon" href="data:,">
+    <link rel="icon" type="image/png" href="data:image/png;base64,">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/auth.js" defer></script>
+</head>
+<body data-page="login">
+    <header class="navbar">
+        <a class="brand" href="login.html">CodeAlpha<span>Social</span></a>
+        <a class="nav-link" href="register.html">Create account</a>
+    </header>
+
+    <main class="auth-layout">
+        <section class="welcome-panel">
+            <span class="eyebrow">WELCOME BACK</span>
+            <h1>Your ideas.<br>Your people.<br>Your community.</h1>
+            <p>Log in and continue your developer journey.</p>
+            <div class="welcome-decoration">{"{ }"} &lt;/&gt;</div>
+        </section>
+
+        <section class="form-panel">
+            <div class="form-heading">
+                <span class="eyebrow">MEMBER LOGIN</span>
+                <h2>Welcome back</h2>
+                <p>Enter your account details to continue.</p>
+            </div>
+
+            <form id="loginForm">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+
+                <button class="primary-btn" type="submit">Log in <span>→</span></button>
+                <p id="message" class="message" role="status" aria-live="polite"></p>
+            </form>
+
+            <p class="switch-text">New to CodeAlpha Social? <a href="register.html">Create an account</a></p>
+        </section>
+    </main>
+
+    <footer class="footer">© 2026 CodeAlpha Social Platform</footer>
+</body>
+</html>

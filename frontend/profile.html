@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | CodeAlpha Social</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/posts.css">
+    <script src="js/auth.js" defer></script>
+    <script src="js/profile.js" defer></script>
+</head>
+<body data-page="profile">
+    <header class="navbar">
+        <a class="brand" href="feed.html">CodeAlpha<span>Social</span></a>
+
+        <nav class="feed-nav">
+            <a class="nav-link" href="feed.html">Feed</a>
+            <a class="nav-link active" href="profile.html">My Profile</a>
+            <button id="logoutBtn" class="secondary-btn" type="button">Log out</button>
+        </nav>
+    </header>
+
+    <main class="profile-layout">
+        <section class="profile-card">
+            <div class="profile-banner"></div>
+
+            <div class="profile-content">
+                <div id="avatar" class="avatar">U</div>
+                <span class="eyebrow">YOUR PROFILE</span>
+                <h1 id="profileName">Loading profile...</h1>
+                <p id="profileUsername" class="username"></p>
+                <p id="profileEmail" class="profile-email"></p>
+                <p id="profileBio" class="profile-bio"></p>
+                <p id="profileMessage" class="message" role="status" aria-live="polite"></p>
+
+                <div class="profile-stats">
+                    <div>
+                        <strong id="postsCount">Loading...</strong>
+                        <span>Posts</span>
+                    </div>
+                    <div>
+                        <strong id="followersCount">Loading...</strong>
+                        <span>Followers</span>
+                    </div>
+                    <div>
+                        <strong id="followingCount">Loading...</strong>
+                        <span>Following</span>
+                    </div>
+                </div>
+
+                <div id="profileNote" class="profile-note">
+                    <span>🚀</span>
+                    <div>
+                        <strong>Your social journey starts here</strong>
+                        <p>Share your first post and connect with the developer community.</p>
+                        <a href="feed.html">Go to feed →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feed-section profile-posts-section">
+            <div class="feed-section-heading">
+                <h2>My Posts</h2>
+                <a class="nav-link" href="feed.html">Create a post →</a>
+            </div>
+
+            <p id="myPostsMessage" class="message" role="status" aria-live="polite">
+                Loading your posts...
+            </p>
+
+            <div id="myPostsContainer" class="posts-container"></div>
+        </section>
+    </main>
+
+    <footer class="footer">© 2026 CodeAlpha Social Platform</footer>
+</body>
+</html>

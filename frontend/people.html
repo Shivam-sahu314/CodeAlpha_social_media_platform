@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People | Social Platform</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/posts.css">
+    <link rel="stylesheet" href="css/people.css">
+</head>
+<body>
+    <header class="people-header">
+        <a href="feed.html" class="people-brand">Social Platform</a>
+
+        <nav>
+            <a href="feed.html">Feed</a>
+            <a href="profile.html">Profile</a>
+            <button id="peopleLogoutBtn" type="button">Logout</button>
+        </nav>
+    </header>
+
+    <main class="people-main">
+        <section class="people-intro">
+            <h1>Discover People</h1>
+            <p>Find people and grow your community.</p>
+        </section>
+
+        <p id="peopleMessage" class="message" role="status"></p>
+
+        <section id="peopleContainer" class="people-grid">
+            <p>Loading people...</p>
+        </section>
+    </main>
+
+    <script src="js/people.js"></script>
+</body>
+</html>

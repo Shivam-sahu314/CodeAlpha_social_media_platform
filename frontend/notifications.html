@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications | Social Platform</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/notifications.css">
+</head>
+<body>
+    <header class="notification-header">
+        <a href="feed.html" class="notification-brand">Social Platform</a>
+
+        <nav>
+            <a href="feed.html">Feed</a>
+            <a href="people.html">People</a>
+            <a href="profile.html">Profile</a>
+            <button id="notificationLogoutBtn" type="button">Logout</button>
+        </nav>
+    </header>
+
+    <main class="notification-main">
+        <section class="notification-title-row">
+            <div>
+                <h1>Notifications</h1>
+                <p id="unreadCount">Loading notifications...</p>
+            </div>
+
+            <button id="markAllReadBtn" type="button">
+                Mark all as read
+            </button>
+        </section>
+
+        <p id="notificationMessage" class="message" role="status"></p>
+
+        <section id="notificationList" class="notification-list">
+            <p>Loading...</p>
+        </section>
+    </main>
+
+    <script src="js/notifications.js"></script>
+</body>
+</html>

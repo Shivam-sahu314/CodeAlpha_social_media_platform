@@ -1,0 +1,365 @@
+
+/* People page header */
+
+.people-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 7%;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e9eaf2;
+    backdrop-filter: blur(12px);
+}
+
+.people-brand {
+    color: #6254dc;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.people-brand:hover {
+    text-decoration: none;
+}
+
+.people-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.people-header nav a {
+    color: #4f5264;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.people-header nav a:hover,
+.people-header nav a.active {
+    color: #6254dc;
+}
+
+.people-header nav button {
+    min-height: 36px;
+    padding: 9px 13px;
+    color: #6254dc;
+    background: #eeebff;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.people-header nav button:hover {
+    background: #e1dcff;
+    transform: translateY(-1px);
+}
+
+/* Main people page */
+
+.people-main {
+    width: min(100% - 32px, 1000px);
+    margin: 35px auto 50px;
+}
+
+.people-intro {
+    margin-bottom: 25px;
+}
+
+.people-intro h1 {
+    margin: 0 0 8px;
+    color: #202237;
+    font-size: clamp(25px, 4vw, 32px);
+    line-height: 1.3;
+    letter-spacing: -0.8px;
+}
+
+.people-intro p {
+    margin: 0;
+    color: #85899b;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* People cards grid */
+
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    align-items: stretch;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+/* Individual person card */
+
+.person-card {
+    min-width: 0;
+    padding: 25px 19px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e9eaf2;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(30, 35, 70, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.person-card:hover {
+    transform: translateY(-3px);
+    border-color: #dedaf5;
+    box-shadow: 0 12px 30px rgba(30, 35, 70, 0.08);
+}
+
+/* Person avatar */
+
+.person-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    color: #6254dc;
+    background: #eeebff;
+    border: 3px solid #f5f2ff;
+    border-radius: 50%;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.person-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Person details */
+
+.person-card h2 {
+    max-width: 100%;
+    margin: 0 0 5px;
+    color: #25263a;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.person-username {
+    max-width: 100%;
+    margin: 0 0 12px;
+    color: #85899b;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.person-bio {
+    width: 100%;
+    min-height: 36px;
+    margin: 0 0 12px;
+    color: #55596c;
+    font-size: 12px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.person-followers {
+    margin: 0 0 16px;
+    color: #85899b;
+    font-size: 11px;
+}
+
+/* Follow and Following buttons */
+
+.person-follow-btn {
+    display: block;
+    width: 100%;
+    min-height: 42px;
+    margin-top: auto;
+    padding: 11px 14px;
+    color: #ffffff;
+    background: #6254dc;
+    border: 1px solid #6254dc;
+    border-radius: 9px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.person-follow-btn:hover:not(:disabled) {
+    background: #5043c3;
+    border-color: #5043c3;
+    transform: translateY(-1px);
+}
+
+.person-follow-btn.following {
+    color: #6254dc;
+    background: #eeebff;
+    border-color: #e2deff;
+}
+
+.person-follow-btn.following:hover:not(:disabled) {
+    color: #b92d42;
+    background: #fff0f2;
+    border-color: #ffd9df;
+}
+
+.person-follow-btn:focus-visible {
+    outline: 3px solid rgba(98, 84, 220, 0.25);
+    outline-offset: 3px;
+}
+
+.person-follow-btn:disabled {
+    opacity: 0.65;
+    cursor: wait;
+    transform: none;
+}
+
+/* Tablet */
+
+@media (max-width: 700px) {
+    .people-header {
+        padding: 15px 4%;
+        gap: 14px;
+    }
+
+    .people-header nav {
+        gap: 10px 14px;
+    }
+
+    .people-header nav a {
+        font-size: 12px;
+    }
+
+    .people-main {
+        margin-top: 28px;
+    }
+
+    .people-grid {
+        gap: 14px;
+    }
+
+    .person-card {
+        padding: 22px 15px 17px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+    .people-header {
+        align-items: flex-start;
+        padding: 15px 16px;
+        gap: 12px;
+    }
+
+    .people-brand {
+        font-size: 17px;
+    }
+
+    .people-header nav {
+        flex: 1;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px 11px;
+    }
+
+    .people-header nav a {
+        font-size: 11px;
+    }
+
+    .people-header nav button {
+        min-height: 32px;
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+
+    .people-main {
+        width: calc(100% - 28px);
+        margin: 25px auto 35px;
+    }
+
+    .people-intro {
+        margin-bottom: 20px;
+    }
+
+    .people-intro h1 {
+        font-size: 25px;
+    }
+
+    .people-intro p {
+        font-size: 12px;
+    }
+
+    .people-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+        gap: 12px;
+    }
+
+    .person-card {
+        padding: 20px 13px 15px;
+        border-radius: 13px;
+    }
+
+    .person-avatar {
+        width: 66px;
+        height: 66px;
+        font-size: 23px;
+    }
+
+    .person-card h2 {
+        font-size: 15px;
+    }
+
+    .person-follow-btn {
+        min-height: 40px;
+        font-size: 12px;
+    }
+}
+
+/* Extra small screens */
+
+@media (max-width: 360px) {
+    .people-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .people-header nav {
+        justify-content: flex-start;
+    }
+
+    .people-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Respect reduced-motion settings */
+
+@media (prefers-reduced-motion: reduce) {
+    .person-card,
+    .person-follow-btn,
+    .people-header nav button {
+        transition: none;
+    }
+}
